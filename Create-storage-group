@@ -1,0 +1,14 @@
+# Create Resource group using PS.
+# Create a storage group using PS.
+
+ $location= "westus"
+ $rdgroup = "payroll"
+ New-AzResourceGroup -Name $rggroup -Location $location
+ 
+ Get-AzResourceGroup
+
+ $storageaccountname = "newstorageaccount"
+
+ New-AzStorageAccount -Name $storageaccountname -Location $location -skuName Premium_LRS -ResourceGroupName $rgnaame -kind StorageV2
+
+ Get-AzStorageAccount

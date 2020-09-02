@@ -12,3 +12,13 @@
  New-AzStorageAccount -Name $storageaccountname -Location $location -skuName Premium_LRS -ResourceGroupName $rgnaame -kind StorageV2
 
  Get-AzStorageAccount
+
+
+### Create storage account using cli
+
+az group create --name Tech_IT_DEPT --location westus
+
+az storage account create --name techstorageimpdata --resource-group Tech_IT_Dept --location westus -sku Standard_LRS --kind StorageV2
+
+
+
